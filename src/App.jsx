@@ -1,4 +1,3 @@
-
 import KartuProfil from './components/Kartu.Profil.jsx';
 
 export default function App() {
