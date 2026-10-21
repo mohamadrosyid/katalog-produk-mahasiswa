@@ -1,89 +1,71 @@
 # Katalog Produk Mahasiswa
 
-Aplikasi berbasis React dan Vite untuk menampilkan data anggota tim proyek mahasiswa beserta peran, tahun angkatan, dan status keaktifan.
+Aplikasi web sederhana untuk menampilkan data anggota tim proyek menggunakan React dan Vite. Aplikasi ini memiliki fitur filter kategori anggota berdasarkan peran, yaitu Mahasiswa, Asisten, dan Alumni.
 
 ## Tampilan Aplikasi
 
-Aplikasi menampilkan tiga anggota tim:
-- Budi Santoso — Mahasiswa, angkatan 2024
-- Siti Rahma — Asisten, angkatan 2023
-- Andi Pratama — Alumni, angkatan 2021
-
-Tersedia juga pilihan kategori anggota pada halaman aplikasi.
-
-**Demo:** https://mohamadrosyid.github.io/katalog-produk-mahasiswa/
+Aplikasi menampilkan daftar anggota tim beserta nama, peran, tahun angkatan, dan status keaktifan. Pengguna dapat memilih kategori untuk menyaring anggota yang ditampilkan.
 
 ## Teknologi yang Digunakan
 
 - React
-- Vite
 - JavaScript
+- Vite
 - CSS
 - Git dan GitHub
 
-## Daftar Komponen dan Props
+## Komponen dan Props
 
-### 1. App
-File: `src/App.jsx`
+### Komponen `KartuProfil`
 
-Komponen utama yang menampilkan judul halaman, pilihan kategori, dan daftar kartu anggota.
-
-### 2. KartuProfil
 File: `src/components/Kartu.Profil.jsx`
-
-Komponen untuk menampilkan informasi setiap anggota.
 
 Props yang digunakan:
 
-| Props | Tipe | Keterangan |
-|---|---|---|
-| `nama` | String | Nama anggota |
-| `peran` | String | Peran anggota |
-| `tahun` | Number | Tahun angkatan |
-| `aktif` | Boolean | Status keaktifan anggota |
+- `nama`: nama anggota tim.
+- `peran`: peran anggota, misalnya Mahasiswa, Asisten, atau Alumni.
+- `tahun`: tahun angkatan anggota.
+- `aktif`: status keaktifan anggota (`true` atau `false`).
 
-Contoh penggunaan:
+### Komponen `App`
 
-```jsx
-<KartuProfil
-  nama="Budi Santoso"
-  peran="Mahasiswa"
-  tahun={2024}
-  aktif={true}
-/>
-```
+File: `src/App.jsx`
 
-## Cara Menjalankan Proyek
+Komponen utama yang menampilkan judul aplikasi, pilihan filter kategori, dan daftar anggota tim. Filter kategori digunakan untuk menampilkan anggota berdasarkan perannya.
 
-Pastikan Node.js dan npm sudah terpasang.
+## Cara Menjalankan Aplikasi
 
-### 1. Clone repository
+Pastikan Node.js dan Git sudah terpasang.
 
-```bash
-git clone https://github.com/mohamadrosyid/katalog-produk-mahasiswa.git
-```
+1. Clone repositori:
 
-### 2. Masuk ke folder proyek
+   ```bash
+   git clone https://github.com/mohamadrosyid/katalog-produk-mahasiswa.git
+   ```
 
-```bash
-cd katalog-produk-mahasiswa
-```
+2. Masuk ke folder proyek:
 
-### 3. Instal dependensi
+   ```bash
+   cd katalog-produk-mahasiswa
+   ```
 
-```bash
-npm install
-```
+3. Instal dependensi:
 
-### 4. Jalankan aplikasi
+   ```bash
+   npm install
+   ```
 
-```bash
-npm run dev
-```
+4. Jalankan aplikasi:
 
-Buka alamat lokal yang ditampilkan terminal, biasanya `http://localhost:5173`.
+   ```bash
+   npm run dev
+   ```
 
-### 5. Build aplikasi
+5. Buka alamat lokal yang ditampilkan di terminal, biasanya `http://localhost:5173`.
+
+## Build untuk Produksi
+
+Jalankan perintah berikut untuk memastikan aplikasi dapat dibuat menjadi versi produksi:
 
 ```bash
 npm run build
@@ -91,10 +73,4 @@ npm run build
 
 ## Penggunaan AI
 
-AI digunakan sebagai alat bantu dalam proses pengembangan untuk memahami langkah-langkah Git dan GitHub, membantu konfigurasi publikasi GitHub Pages, serta menyusun dokumentasi README. Kode dan hasil aplikasi perlu diperiksa kembali oleh pengembang.
-
-## Publikasi
-
-Aplikasi dipublikasikan menggunakan GitHub Pages.
-
-Tautan: https://mohamadrosyid.github.io/katalog-produk-mahasiswa/
+AI digunakan sebagai alat bantu untuk memahami langkah-langkah pengembangan aplikasi React, implementasi filter kategori, penggunaan Git dan GitHub, serta proses publikasi aplikasi melalui GitHub Pages. Kode dan hasil aplikasi diperiksa kembali melalui VS Code dan browser.
